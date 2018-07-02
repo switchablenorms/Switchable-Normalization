@@ -137,3 +137,7 @@ This repository provides imagenet classification and object detection results an
 
 Download them and put them into the `{repo_root}/data/pretrain_model`.
 
+## License
+
+All materials in this repository are released under the [CC-BY-NC 4.0 LICENSE](https://creativecommons.org/licenses/by-nc/4.0/).
+
