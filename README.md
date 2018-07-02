@@ -135,7 +135,7 @@ This repository provides imagenet classification and object detection results an
  
 ## Pretrained Model
 
-- [ResNetV1SN50](https://drive.google.com/file/d/1N-hCcu6ri4zDEPWBAz4IZ8D7R0hq4Y_m/view?usp=sharing)
+- [ResNet50v1+SN (8,32)](https://drive.google.com/file/d/1N-hCcu6ri4zDEPWBAz4IZ8D7R0hq4Y_m/view?usp=sharing)
 
 Download them and put them into the `{repo_root}/data/pretrain_model`.
 
