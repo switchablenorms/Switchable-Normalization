@@ -19,8 +19,10 @@ This repository provides imagenet classification and object detection results an
   year={2018}
 }
 ```
-## Result
+## Overview of Results
+
 ### Image Classification in ImageNet
+
 **Comparisons of top-1 accuracies** on the validation set of ImageNet, by using ResNet50 trained with SN, BN, and GN in different batch size settings. The bracket (·, ·) denotes (#GPUs,#samples per GPU). In the bottom part, “GN-BN” indicates the difference between the accuracies of GN and BN. The “-” in (8, 1) of BN indicates it does not converge.
 <table>
 <tbody>
