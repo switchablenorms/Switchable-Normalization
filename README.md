@@ -2,6 +2,8 @@
 
 Switchable Normalization is a normalization technique that is able to learn different normalization operations for different normalization layers in a deep neural network.
 
+![](teaser.jpg?raw=true)
+
 ## Update
 
 - 2018/7/2: The code of image classification and a pretrained model on ImageNet are released.
