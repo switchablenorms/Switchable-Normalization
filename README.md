@@ -12,9 +12,9 @@ Switchable Normalization is a normalization technique that is able to learn diff
 This repository provides imagenet classification and object detection results and models trained with [Switchable Normalization](https://arxiv.org/abs/1806.10779):
 
 ```
-@article{Switchable Normalization,
+@article{SwitchableNorm,
   title={Differentiable Learning-to-Normalize via Switchable Normalization},
-  author={Ping Luo, Jiamin Ren, Zhanglin Peng},
+  author={Ping Luo and Jiamin Ren and Zhanglin Peng},
   journal={arXiv:1806.10779},
   year={2018}
 }
