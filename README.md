@@ -1,6 +1,6 @@
 # Switchable Normalization
 
-Switchable Normalization is a normalization technique that is able to learn different normalization operations for different normalization layers in a deep neural network.
+Switchable Normalization is a normalization technique that is able to learn different normalization operations for different normalization layers in a deep neural network in an end-to-end manner.
 
 ![](teaser.jpg?raw=true)
 
