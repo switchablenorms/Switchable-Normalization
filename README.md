@@ -134,12 +134,16 @@ This repository provides imagenet classification and object detection results an
 - Download the ImageNet dataset and put them into the `{repo_root}/data/imagenet`.
   - move validation images to labeled subfolders
     - To do this, you can use the following script: https://raw.githubusercontent.com/soumith/imagenetloader.torch/master/valprep.sh
- 
-## Pretrained Model
 
-- [ResNet50v1+SN (8,32)](https://drive.google.com/file/d/1N-hCcu6ri4zDEPWBAz4IZ8D7R0hq4Y_m/view?usp=sharing)
+## Model Zoo
+| Model | Top-1<sup>*</sup> | Top-5<sup>*</sup> | Epochs |LR Scheduler| Weight Decay | Download | 
+| :--:  | :--: | :--:  | :--:  | :--:  | :--:  | :--: |
+|ResNet50v1+SN (8,32) | 76.92% | 93.26% | 100  | Initial lr=0.1 decay=0.1 steps[30,60,90,10]| 1e-4 |[[Google Drive]](https://drive.google.com/open?id=1lOTzjgX6B9J9gkm8JdxaWGBKC1T9VLsl)  [[Baidu Pan]](https://pan.baidu.com/s/1pLdnZYxynpztEnc1eUzVvA)|
+|ResNet50v1+SN (8,32) | 77.49% | 93.32% | 120  | warmup + cosine lr| 1e-4 |[[Google Drive]](https://drive.google.com/open?id=17mHmoVom2zM7nrbFeE4yzKa7KtqykTyD)  [[Baidu Pan]](https://pan.baidu.com/s/1jx3Bj15hgfEBZYhi5HP0kQ)|
 
-Download them and put them into the `{repo_root}/data/pretrain_model`.
+*1-crop validation accuracy on ImageNet (center 224x224 crop from resized image with shorter side=256)     
+
+When evaluation, download them and put them into the `{repo_root}/data/pretrained_model`.
 
 ## License
 
