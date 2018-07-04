@@ -6,8 +6,8 @@ Switchable Normalization is a normalization technique that is able to learn diff
 
 ## Update
 
+- 2018/7/4: Model zoo updated. More pretrained models and the code of object detection will be released soon!
 - 2018/7/2: The code of image classification and a pretrained model on ImageNet are released.
-- More pretrained models and the code of object detection will be released soon.
 
 ## Introduction
 
@@ -136,12 +136,19 @@ This repository provides imagenet classification and object detection results an
     - To do this, you can use the following script: https://raw.githubusercontent.com/soumith/imagenetloader.torch/master/valprep.sh
 
 ## Model Zoo
-| Model | Top-1<sup>*</sup> | Top-5<sup>*</sup> | Epochs |LR Scheduler| Weight Decay | Download | 
-| :--:  | :--: | :--:  | :--:  | :--:  | :--:  | :--: |
-|ResNet50v1+SN (8,32) | 76.92% | 93.26% | 100  | Initial lr=0.1 decay=0.1 steps[30,60,90,10]| 1e-4 |[[Google Drive]](https://drive.google.com/open?id=1lOTzjgX6B9J9gkm8JdxaWGBKC1T9VLsl)  [[Baidu Pan]](https://pan.baidu.com/s/1pLdnZYxynpztEnc1eUzVvA)|
-|ResNet50v1+SN (8,32) | 77.49% | 93.32% | 120  | warmup + cosine lr| 1e-4 |[[Google Drive]](https://drive.google.com/open?id=17mHmoVom2zM7nrbFeE4yzKa7KtqykTyD)  [[Baidu Pan]](https://pan.baidu.com/s/1jx3Bj15hgfEBZYhi5HP0kQ)|
 
-*1-crop validation accuracy on ImageNet (center 224x224 crop from resized image with shorter side=256)     
+We provide models pretrained with SN on ImageNet, and compare to those pretrained with BN as reference.
+
+| Model | Top-1<sup>*</sup> | Top-5<sup>*</sup> | Epochs |LR Scheduler| Weight Decay | Download | 
+| :----:  | :--: | :--:  | :--:  | :--:  | :--:  | :--: |
+|ResNet50v1+SN (8,32) | 77.49% | 93.32% | 120  | warmup + cosine lr| 1e-4 |[[Google Drive]](https://drive.google.com/open?id=17mHmoVom2zM7nrbFeE4yzKa7KtqykTyD)  [[Baidu Pan]](https://pan.baidu.com/s/1jx3Bj15hgfEBZYhi5HP0kQ)|
+|ResNet50v1+SN (8,32) | 76.92% | 93.26% | 100  | Initial lr=0.1 decay=0.1 steps[30,60,90,10]| 1e-4 |[[Google Drive]](https://drive.google.com/open?id=1lOTzjgX6B9J9gkm8JdxaWGBKC1T9VLsl)  [[Baidu Pan]](https://pan.baidu.com/s/1pLdnZYxynpztEnc1eUzVvA)|
+|ResNet50v1+BN | 75.20% | 92.20% | --  | stepwise decay | -- |[[TensorFlow models]](http://download.tensorflow.org/models/resnet_v1_50_2016_08_28.tar.gz)|
+|ResNet50v1+BN | 76.00% | 92.98% | --  | stepwise decay | -- |[[PyTorch Vision]](https://github.com/Cadene/pretrained-models.pytorch#torchvision)|
+|ResNet50v1+BN | 75.30% | 92.20% | --  | stepwise decay | -- |[[MSRA]](https://github.com/KaimingHe/deep-residual-networks)|
+|ResNet50v1+BN | 75.99% | 92.98% | --  | stepwise decay | -- |[[FB Torch]](https://github.com/facebook/fb.resnet.torch)|
+
+*single-crop validation accuracy on ImageNet (a 224x224 center crop from resized image with shorter side=256)     
 
 When evaluation, download them and put them into the `{repo_root}/data/pretrained_model`.
 
