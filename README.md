@@ -129,11 +129,22 @@ This repository provides imagenet classification and object detection results an
   - pytorch>=0.4.0
   - torchvision>=0.2.1
   - tensorboardX
+  - pyyaml
   
 ### Data Preparation
 - Download the ImageNet dataset and put them into the `{repo_root}/data/imagenet`.
   - move validation images to labeled subfolders
     - To do this, you can use the following script: https://raw.githubusercontent.com/soumith/imagenetloader.torch/master/valprep.sh
+
+### Training a model from scratch
+```
+./train_val.sh configs/config_resnetv1sn50_cosine.yaml
+```
+### Evaluating performance of a model
+Download the pretrained models from Model Zoo and put them into the {repo_root}/data/pretrained_model
+```
+./test.sh configs/config_resnetv1sn50_cosine.yaml
+```
 
 ## Model Zoo
 

@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 
 class SwitchNorm(nn.Module):
-    def __init__(self, num_features, eps=1e-5, momentum=0.997, using_moving_average=False):
+    def __init__(self, num_features, eps=1e-5, momentum=0.997, using_moving_average=False, last_gamma=False):
         super(SwitchNorm, self).__init__()
         self.weight = nn.Parameter(torch.ones(1,num_features,1,1))
         self.bias = nn.Parameter(torch.zeros(1,num_features,1,1))
@@ -11,6 +11,7 @@ class SwitchNorm(nn.Module):
         self.eps = eps
         self.momentum = momentum
         self.using_moving_average = using_moving_average
+        self.last_gamma = last_gamma
         self.register_buffer('running_mean', torch.zeros(1, num_features, 1))
         self.register_buffer('running_var', torch.zeros(1, num_features, 1))
         self.reset_parameters()
@@ -18,7 +19,10 @@ class SwitchNorm(nn.Module):
     def reset_parameters(self):
         self.running_mean.zero_()
         self.running_var.zero_()
-        self.weight.data.fill_(1)
+        if self.last_gamma:
+            self.weight.data.fill_(0)
+        else:
+            self.weight.data.fill_(1)
         self.bias.data.zero_()
 
     def forward(self, x):
