@@ -6,7 +6,8 @@ Switchable Normalization is a normalization technique that is able to learn diff
 
 ## Update
 
-- 2018/7/4: Model zoo updated. More pretrained models and the code of object detection will be released soon!
+- 2018/7/9: We would like to explain the merit behind SN. See [html preview](http://htmlpreview.github.io/?https://github.com/switchablenorms/Switchable-Normalization/blob/master/blog_cn/blog_cn.html) or [this blog (in Chinese)](https://zhuanlan.zhihu.com/p/39296570?utm_source=wechat_session&utm_medium=social&utm_oi=70591319113728). More trained models and the code of object detection will be released soon!
+- 2018/7/4: Model zoo updated!
 - 2018/7/2: The code of image classification and a pretrained model on ImageNet are released.
 
 ## Introduction
@@ -148,7 +149,7 @@ Download the pretrained models from Model Zoo and put them into the {repo_root}/
 
 ## Model Zoo
 
-We provide models pretrained with SN on ImageNet, and compare to those pretrained with BN as reference.
+We provide models pretrained with SN on ImageNet, and compare to those pretrained with BN as reference. If you use these models in research, please cite the SN paper.
 
 | Model | Top-1<sup>*</sup> | Top-5<sup>*</sup> | Epochs |LR Scheduler| Weight Decay | Download | 
 | :----:  | :--: | :--:  | :--:  | :--:  | :--:  | :--: |
