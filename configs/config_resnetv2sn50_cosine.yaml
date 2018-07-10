@@ -18,3 +18,5 @@ TRAIN:
     print_freq: 10
     model_dir: checkpoint/resnetv2sn50_cosine
 
+TEST:
+    checkpoint_path : data/pretrained_model/ResNet50v2+SN(8,32)-77.57.pth
