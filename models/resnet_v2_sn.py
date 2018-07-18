@@ -57,7 +57,7 @@ class Bottleneck(nn.Module):
         self.conv2 = nn.Conv2d(planes, planes, kernel_size=3, stride=stride,
                                padding=1, bias=False)
         self.sn3 = sn.SwitchNorm(planes, using_moving_average=using_moving_average)
-        self.conv3 = nn.Conv2d(planes, planes * 4, kernel_size=1, bias=False)
+        self.conv3 = nn.Conv2d(planes, planes * block.expansion, kernel_size=1, bias=False)
         self.relu = nn.ReLU(inplace=True)
         self.downsample = downsample
         self.stride = stride
