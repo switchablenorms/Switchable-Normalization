@@ -1,0 +1,23 @@
+TRAIN:
+    model: resnetv1sn101
+    workers: 16
+    batch_size: 256
+    epochs: 120
+
+    lr_mode : cosine
+    base_lr: 0.1
+    warmup_epochs: 5
+    warmup_lr: 0.0
+    targetlr : 0.0
+
+    momentum: 0.9
+    weight_decay: 0.0001
+
+    using_moving_average : True
+    last_gamma : True
+
+    print_freq: 10
+    model_dir: checkpoint/resnetv1sn101_cosine
+
+TEST:
+    checkpoint_path : data/pretrained_model/ResNet101v1+SN(8,32).pth

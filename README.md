@@ -153,6 +153,7 @@ We provide models pretrained with SN on ImageNet, and compare to those pretraine
 
 | Model | Top-1<sup>*</sup> | Top-5<sup>*</sup> | Epochs |LR Scheduler| Weight Decay | Download | 
 | :----:  | :--: | :--:  | :--:  | :--:  | :--:  | :--: |
+|ResNet101v1+SN (8,32) | 78.54% | 94.10% | 120  | warmup + cosine lr| 1e-4 |[[Google Drive]](https://drive.google.com/open?id=1xza5ju6lRRelPym3Sj99VY_8c4jXhxkn)  [[Baidu Pan]](https://pan.baidu.com/s/1CCM0zZITQOzkXd__pWERZw)|
 |ResNet50v2+SN (8,32) | 77.57% | 93.65% | 120  | warmup + cosine lr| 1e-4 |[[Google Drive]](https://drive.google.com/file/d/1CjLURwDkynhiXoKjYxUyEIOnWDPVmPnL/view?usp=sharing)  [[Baidu Pan]](https://pan.baidu.com/s/1XdN4tQcvTTIZjyNrnQpQXw)|
 |ResNet50v1+SN (8,32) | 77.49% | 93.32% | 120  | warmup + cosine lr| 1e-4 |[[Google Drive]](https://drive.google.com/open?id=17mHmoVom2zM7nrbFeE4yzKa7KtqykTyD)  [[Baidu Pan]](https://pan.baidu.com/s/1jx3Bj15hgfEBZYhi5HP0kQ)|
 |ResNet50v1+SN (8,32) | 76.92% | 93.26% | 100  | Initial lr=0.1 decay=0.1 steps[30,60,90,10]| 1e-4 |[[Google Drive]](https://drive.google.com/open?id=1lOTzjgX6B9J9gkm8JdxaWGBKC1T9VLsl)  [[Baidu Pan]](https://pan.baidu.com/s/1pLdnZYxynpztEnc1eUzVvA)|
