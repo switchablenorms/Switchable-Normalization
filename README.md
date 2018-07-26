@@ -6,13 +6,14 @@ Switchable Normalization is a normalization technique that is able to learn diff
 
 ## Update
 
+- 2018/7/26: The code for object detection have been released in the repository of [SwitchNorm_Detection](https://github.com/switchablenorms/SwitchNorm_Detection).
 - 2018/7/9: We would like to explain the merit behind SN. See [html preview](http://htmlpreview.github.io/?https://github.com/switchablenorms/Switchable-Normalization/blob/master/blog_cn/blog_cn.html) or [this blog (in Chinese)](https://zhuanlan.zhihu.com/p/39296570?utm_source=wechat_session&utm_medium=social&utm_oi=70591319113728). More trained models and the code of object detection will be released soon!
 - 2018/7/4: Model zoo updated!
 - 2018/7/2: The code of image classification and a pretrained model on ImageNet are released.
 
-## Introduction
+## Citation
 
-This repository provides imagenet classification and object detection results and models trained with [Switchable Normalization](https://arxiv.org/abs/1806.10779):
+This repository provides imagenet classification results and models trained with [Switchable Normalization](https://arxiv.org/abs/1806.10779). You are encouraged to cite the following paper if you use SN in research.
 
 ```
 @article{SwitchableNorm,
