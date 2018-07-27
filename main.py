@@ -37,6 +37,7 @@ ITER_COMPUTE_BATCH_AVEARGE = 200
 def main():
     global args, best_prec1
     args = parser.parse_args()
+    args.using_bn = True
     with open(args.config) as f:
         config = yaml.load(f)
 
@@ -53,9 +54,9 @@ def main():
     # create model
     print("=> creating model '{}'".format(args.model))
     if 'resnetv1sn' in args.model:
-        model = models.__dict__[args.model](using_moving_average = args.using_moving_average, last_gamma=args.last_gamma)
+        model = models.__dict__[args.model](using_moving_average = args.using_moving_average, using_bn=args.using_bn, last_gamma=args.last_gamma)
     else:
-        model = models.__dict__[args.model](using_moving_average=args.using_moving_average)
+        model = models.__dict__[args.model](using_moving_average=args.using_moving_average, using_bn=args.using_bn)
 
     if not args.distributed:
         model = torch.nn.DataParallel(model).cuda()
