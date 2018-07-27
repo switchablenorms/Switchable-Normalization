@@ -6,8 +6,9 @@ Switchable Normalization is a normalization technique that is able to learn diff
 
 ## Update
 
+- 2018/7/27: The pretrained models of ResNet50+SN(8,1) and SN(8,4) have been released. These models may help in the finetuning stage when the batch size of a target task is constrained to be small. We also release the pretrained models of ResNet101v2+SN that achieves 78.81%/94.16% top-1/top-5 accuracies on ImageNet. More pretrained models will be released soon!
 - 2018/7/26: The code for object detection have been released in the repository of [SwitchNorm_Detection](https://github.com/switchablenorms/SwitchNorm_Detection).
-- 2018/7/9: We would like to explain the merit behind SN. See [html preview](http://htmlpreview.github.io/?https://github.com/switchablenorms/Switchable-Normalization/blob/master/blog_cn/blog_cn.html) or [this blog (in Chinese)](https://zhuanlan.zhihu.com/p/39296570?utm_source=wechat_session&utm_medium=social&utm_oi=70591319113728). More trained models and the code of object detection will be released soon!
+- 2018/7/9: We would like to explain the merit behind SN. See [html preview](http://htmlpreview.github.io/?https://github.com/switchablenorms/Switchable-Normalization/blob/master/blog_cn/blog_cn.html) or [this blog (in Chinese)](https://zhuanlan.zhihu.com/p/39296570?utm_source=wechat_session&utm_medium=social&utm_oi=70591319113728). 
 - 2018/7/4: Model zoo updated!
 - 2018/7/2: The code of image classification and a pretrained model on ImageNet are released.
 
@@ -150,7 +151,7 @@ Download the pretrained models from Model Zoo and put them into the {repo_root}/
 
 ## Model Zoo
 
-We provide models pretrained with SN on ImageNet, and compare to those pretrained with BN as reference. If you use these models in research, please cite the SN paper.
+We provide models pretrained with SN on ImageNet, and compare to those pretrained with BN as reference. If you use these models in research, please cite the SN paper. The configuration of SN is denoted as (#GPUs, #images per GPU).
 
 | Model | Top-1<sup>*</sup> | Top-5<sup>*</sup> | Epochs |LR Scheduler| Weight Decay | Download | 
 | :----:  | :--: | :--:  | :--:  | :--:  | :--:  | :--: |
@@ -165,10 +166,11 @@ We provide models pretrained with SN on ImageNet, and compare to those pretraine
 |ResNet50v1+BN | 75.30% | 92.20% | --  | stepwise decay | -- |[[MSRA]](https://github.com/KaimingHe/deep-residual-networks)|
 |ResNet50v1+BN | 75.99% | 92.98% | --  | stepwise decay | -- |[[FB Torch]](https://github.com/facebook/fb.resnet.torch)|
 
-*single-crop validation accuracy on ImageNet (a 224x224 center crop from resized image with shorter side=256)     
-†For (8,1), SN contains IN and LN without BN, as BN is the same as IN in training. when use this model, you should add `using_bn : False` in  yaml file.
+*single-crop validation accuracy on ImageNet (a 224x224 center crop from resized image with shorter side=256)    
 
-When evaluation, download them and put them into the `{repo_root}/data/pretrained_model`.
+†For (8,1), SN contains IN and LN without BN, as BN is the same as IN in training. When using this model, you should add `using_bn : False` in  yaml file.
+
+In evaluation, download the above models and put them into the `{repo_root}/data/pretrained_model`.
 
 ## License
 
