@@ -19,9 +19,9 @@ This repository provides imagenet classification results and models trained with
 ```
 @article{SwitchableNorm,
   title={Differentiable Learning-to-Normalize via Switchable Normalization},
-  author={Ping Luo and Jiamin Ren and Zhanglin Peng},
-  journal={arXiv:1806.10779},
-  year={2018}
+  author={Ping Luo and Jiamin Ren and Zhanglin Peng and Ruimao Zhang and Jingyu Li},
+  journal={International Conference on Learning Representation (ICLR)},
+  year={2019}
 }
 ```
 ## Overview of Results
