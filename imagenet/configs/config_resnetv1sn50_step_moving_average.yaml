@@ -1,0 +1,28 @@
+TRAIN:
+    model: resnetv1sn50
+    workers: 3
+    batch_size: 256
+    epochs: 100
+
+    lr_mode : step
+    base_lr: 0.1
+    decay_factor : 0.1
+    step : 30,60,90
+
+    momentum: 0.9
+    weight_decay: 0.0001
+
+    using_moving_average : True
+    last_gamma : True
+    using_bn: True
+
+    print_freq: 100
+    model_dir: checkpoint/resnetv1sn50_step_moving_average
+
+    train_root: data/imagenet/train
+    train_source: data/imagenet/train.txt
+    val_root: data/imagenet/val
+    val_source: data/imagenet/val.txt
+
+TEST:
+    checkpoint_path : data/pretrained_model/ResNet50v1+SN(8,32)-76.92.pth

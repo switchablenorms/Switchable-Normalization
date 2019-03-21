@@ -1,0 +1,27 @@
+TRAIN:
+    workers: 3
+    batch_size: 512
+    epochs: 40
+
+    class_num : 85742
+    embedding_size : 512
+    backbone : resnet50
+    use_se : False
+    norm_func : 'syncsn'
+
+    lr_mode : step
+    base_lr: 0.1
+    decay_factor : 0.1
+    step : 24,30,36
+
+    momentum: 0.9
+    weight_decay: 0.0005
+
+    print_freq: 100
+    model_dir: checkpoint/resnet50syncsn
+
+    train_root: data/faces_emore/imgs
+    train_list: data/faces_emore/train.txt
+
+TEST:
+    checkpoint_path : data/pretrained_model/resnet50syncsn.pth
