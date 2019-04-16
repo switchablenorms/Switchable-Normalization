@@ -109,6 +109,15 @@
 
 ### Data Preparation
 - Download the ImageNet dataset and put them into the `{repo_root}/imagenet/data/imagenet`.
+  The meta file(train.txt or val.txt) consists of the file name and category. Just like:
+  ```
+  n01440764/n01440764_10026.JPEG 0
+  n01440764/n01440764_10027.JPEG 0
+  n01440764/n01440764_10029.JPEG 0
+  n01440764/n01440764_10040.JPEG 0
+  n01440764/n01440764_10042.JPEG 0
+  n01440764/n01440764_10043.JPEG 0
+  ```
 
 ### Training a model from scratch
 ```
