@@ -248,8 +248,8 @@ def validate(val_loader, model, criterion, epoch, writer):
             dist.all_reduce_multigpu([reduced_prec5])
 
             losses.update(reduced_loss.item(), input.size(0))
-            top1.update(prec1.item(), input.size(0))
-            top5.update(prec5.item(), input.size(0))
+            top1.update(reduced_prec1.item(), input.size(0))
+            top5.update(reduced_prec5.item(), input.size(0))
 
             # measure elapsed time
             batch_time.update(time.time() - end)
